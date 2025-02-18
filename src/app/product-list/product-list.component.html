@@ -1,2 +1,6 @@
-
+<form (ngSubmit)="findUser()">
+    <input type="text" [(ngModel)]="userId" name="userId" required>
+    <button type="submit">Submit</button>
+   <h4>{{userId}}</h4> 
+  </form>
   
