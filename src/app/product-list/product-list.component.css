@@ -1,0 +1,64 @@
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    padding: 8px;
+    width: 70%;
+  }
+  
+  .search-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .product-list {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .product-card {
+    width: 200px;
+    height: 300px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  .button-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  

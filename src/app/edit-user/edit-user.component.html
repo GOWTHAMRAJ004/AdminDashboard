@@ -1,0 +1,15 @@
+<div class="edit-container">
+    <h2>Edit User</h2>
+    <label>Select Field:</label>
+    <select [(ngModel)]="editField">
+        <option value="name">Name</option>
+        <option value="address">Address</option>
+        <option value="creditPoints">Credit Points</option>
+        <option value="phoneNumber">Phone Number</option>
+    </select>
+
+    <input [(ngModel)]="editValue" placeholder="Enter new value">
+    
+    <button (click)="saveEdit()">Save</button>
+    <button (click)="cancelEdit()">Cancel</button>
+</div>

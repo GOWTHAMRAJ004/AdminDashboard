@@ -24,7 +24,7 @@ export class ProductComponent {
 constructor (private productsService :ProductServiceService){
 }
 submitForm() {
-  this.productsService.createProduct(this.newProduct).subscribe({
+  this.productsService.addProduct(this.newProduct).subscribe({
     next: (response) => {
       console.log("Product created successfully:", response);
       this.resetForm(); 

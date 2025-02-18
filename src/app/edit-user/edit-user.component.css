@@ -1,0 +1,58 @@
+.edit-container {
+    position: fixed; /* Stays in place when scrolling */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the box */
+    
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items inside */
+    gap: 8px; /* Minimal space between elements */
+    
+    width: auto; /* Adjusts to content */
+    min-width: 250px; /* Keeps it compact */
+    max-width: 300px; /* Prevents it from stretching */
+}
+
+h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:first-of-type {
+    background-color: #28a745;
+    color: white;
+}
+
+button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+}

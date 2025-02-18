@@ -1,6 +1,34 @@
-<form (ngSubmit)="findUser()">
-    <input type="text" [(ngModel)]="userId" name="userId" required>
-    <button type="submit">Submit</button>
-   <h4>{{userId}}</h4> 
-  </form>
+<div class="container">
+    <h2>Product List</h2>
+  
+    
+    <div class="search-container">
+      <input 
+        type="text" 
+        [(ngModel)]="userId" 
+        placeholder="Enter Product ID" 
+        class="input-field"
+      />
+      <button (click)="findUser()" class="search-button">Find Product</button>
+    </div>
+  
+    <p *ngIf="searchError" class="error-message">{{ searchError }}</p>
+  
+  
+    <div *ngIf="products.length > 0" class="product-list">
+      <div *ngFor="let product of products" class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p><strong>ID:</strong> {{ product.userId }}</p>
+        <p><strong>Address:</strong> {{ product.address }}</p>
+        <p><strong>Credit Points:</strong> {{ product.creditPoints }}</p>
+  
+        <div class="button-group">
+          <button (click)="editProduct(product)" class="edit-button">Edit</button>
+          <button (click)="deleteUser(product.userId)" class="delete-button">Delete</button>
+        </div>
+      </div>
+    </div>
+  
+    <p *ngIf="products.length === 0 && !searchError">No products available.</p>
+  </div>
   
