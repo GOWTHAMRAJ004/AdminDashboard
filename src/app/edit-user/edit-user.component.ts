@@ -26,12 +26,12 @@ export class EditUserComponent implements OnInit {
   saveEdit() {
     if (this.editField && this.editValue !== '') {
       this.productService.updateProductField(this.userId, this.editField, this.editValue).subscribe(() => {
-        this.router.navigate(['/Home']); 
+        this.router.navigate(['/home']); 
       });
     }
   }
 
   cancelEdit() {
-    this.router.navigate(['/Home']); 
+    this.router.navigate(['/home']); 
 }
 }

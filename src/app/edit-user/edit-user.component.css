@@ -1,22 +1,21 @@
 .edit-container {
-    position: fixed; /* Stays in place when scrolling */
+    position: fixed; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the box */
+    transform: translate(-50%, -50%); 
     
     background-color: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers items inside */
-    gap: 8px; /* Minimal space between elements */
+    align-items: center; 
+    gap: 8px; 
     
-    width: auto; /* Adjusts to content */
-    min-width: 250px; /* Keeps it compact */
-    max-width: 300px; /* Prevents it from stretching */
+    width: auto; 
+    min-width: 250px; 
+    max-width: 300px; 
 }
 
 h2 {

@@ -1,0 +1,49 @@
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+  }
+  
+  .intro {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .offer-list, .why-choose {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .offer-list li, .why-choose li {
+    font-size: 16px;
+    margin: 8px 0;
+    padding: 8px;
+    background: #e8f5e9;
+    border-radius: 6px;
+  }
+  
+  .shop-now-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .shop-now-button:hover {
+    background-color: #219150;
+  }
+  

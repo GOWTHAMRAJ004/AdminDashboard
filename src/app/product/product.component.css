@@ -1,6 +1,6 @@
 .container {
-    margin-top:10px ;
     flex: 1;
+    margin-top: 14px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -16,12 +16,13 @@
 }
 
 .form-box h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 label {
@@ -38,6 +39,7 @@ input {
 }
 
 button {
+    margin-top: 10px;
     width: 100%;
     padding: 10px;
     background: #007bff;

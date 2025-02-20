@@ -23,12 +23,13 @@ export class ProductListComponent implements OnInit {
     this.productsService.products$.subscribe({
       next: (data) => {
         this.products = data;
+        console.warn(this.products);
         this.allProducts = data;
       },
       error: (error) => console.error('Error fetching products:', error)
     });
 
-    // Initial fetch
+    
     this.productsService.getAllProducts().subscribe();
   }
 
