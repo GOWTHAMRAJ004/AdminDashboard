@@ -15,37 +15,37 @@ export class ProductServiceService {
   constructor(private http: HttpClient) {}
 
   getAllProducts(): Observable<product[]> {
-    return this.http.get<product[]>(`${environment.apiUrl}/getAllUser`).pipe(
+    return this.http.get<product[]>(`${environment.apiUrl}/getAllProducts `).pipe(
       tap(products => this.productsSubject.next(products)) 
     );
   }
 
   addProduct(newProduct: product): Observable<product> {
-    return this.http.post<product>(`${environment.apiUrl}/createUser`, newProduct).pipe(
+    return this.http.post<product>(`${environment.apiUrl}/createProduct`, newProduct).pipe(
       tap(() => this.refreshProducts()) 
     );
   }
 
-  deleteProduct(userId: string): Observable<void> {
-    return this.http.delete<void>(`${environment.apiUrl}/deleteUser/${userId}`).pipe(
-      tap(() => {
-        const updatedProducts = this.productsSubject.value.filter(product => product.userId !== userId);
-        this.productsSubject.next(updatedProducts);
+  deleteProduct(productId: string): Observable<void> {
+    return this.http.delete<void>(`${environment.apiUrl}/deleteProduct/${productId}`).pipe(
+      tap((response) => {
+       console.log(response);
       })
     );
   }
 
 
-  updateProductField(userId: string, field: string, value: any): Observable<product> {
-    return this.http.put<product>(`${environment.apiUrl}/updateUser/${userId}`, { [field]: value }).pipe(
+  updateProductField(productId: string, field: string, value: any): Observable<any> {
+    const payload = { field:field,value:value };
+    console.log(payload);
+  
+    return this.http.put<any>(`${environment.apiUrl}/updateProduct/${productId}`, payload).pipe(
       tap(updatedProduct => {
-        const updatedProducts = this.productsSubject.value.map(product =>
-          product.userId === userId ? { ...product, [field]: value } : product
-        );
-        this.productsSubject.next(updatedProducts);
-      })
+        console.log(updatedProduct);
+            })
     );
   }
+  
   private refreshProducts() {
     this.getAllProducts().subscribe(); 
   }

@@ -14,16 +14,17 @@ import {FormsModule} from '@Angular/forms';
 export class ProductComponent {
   products: product[] = [];
   newProduct: product = {
-    userId: '',
-    name: '',
-    address: '',
-    creditPoints: 0,
+    productId: '',
+    productName: '',
+    ShippingAddress: '',
+    discount: 0,
     phoneNumber: '', 
   };
 
 constructor (private productsService :ProductServiceService){
 }
 submitForm() {
+  console.warn(this.newProduct);
   this.productsService.addProduct(this.newProduct).subscribe({
     next: (response) => {
       console.log("Product created successfully:", response);
@@ -37,10 +38,10 @@ submitForm() {
 
 resetForm() {
   this.newProduct = {
-    userId: '',
-    name: '',
-    address: '',
-    creditPoints: 0,
+    productId: '',
+    productName: '',
+    ShippingAddress: '',
+    discount: 0,
     phoneNumber: '',
   };
 }

@@ -9,7 +9,7 @@ import {FormsModule} from '@Angular/forms';
   styleUrl: './edit-user.component.css'
 })
 export class EditUserComponent implements OnInit {
-  userId!: string;
+  productId!: string;
   editField: string = '';
   editValue: any = '';
 
@@ -20,18 +20,22 @@ export class EditUserComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userId = this.route.snapshot.paramMap.get('id') || '';
+    this.productId = this.route.snapshot.paramMap.get('id') || '';
+    console.warn(this.productId);
   }
 
   saveEdit() {
     if (this.editField && this.editValue !== '') {
-      this.productService.updateProductField(this.userId, this.editField, this.editValue).subscribe(() => {
-        this.router.navigate(['/home']); 
+      console.warn(this.editField);
+      console.warn(this.editValue);
+      this.productService.updateProductField(this.productId, this.editField, this.editValue).subscribe(() => {
+        this.productService.getAllProducts().subscribe();
+        this.router.navigate(['/product']); 
       });
     }
   }
 
   cancelEdit() {
-    this.router.navigate(['/home']); 
+    this.router.navigate(['/product']); 
 }
 }

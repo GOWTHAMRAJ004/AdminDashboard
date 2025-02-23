@@ -1,7 +1,7 @@
 export interface product{         
-  userId: string;        
-  name: string;         
-  address: string;       
-  creditPoints: number;  
+  productId: string;        
+  productName: string;         
+  ShippingAddress: string;       
+  discount: number;  
   phoneNumber: string;   
 }

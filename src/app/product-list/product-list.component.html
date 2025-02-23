@@ -4,7 +4,7 @@
     <div class="search-container">
       <input 
         type="text" 
-        [(ngModel)]="userId" 
+        [(ngModel)]="productId" 
         placeholder="Enter Product ID" 
         class="input-field"
       />
@@ -16,15 +16,15 @@
   
     <div *ngIf="products.length > 0" class="product-list">
       <div *ngFor="let product of products" class="product-card">
-        <h3>{{ product.name }}</h3>
-        <p><strong>ID:</strong> {{ product.userId }}</p>
-        <p><strong>Address:</strong> {{ product.address }}</p>
-        <p><strong>Credit Points:</strong> {{ product.creditPoints }}</p>
+        <h3>{{ product.productName }}</h3>
+        <p><strong>productId:</strong> {{ product.productId }}</p>
+        <p><strong>ShippingAddress:</strong> {{ product.ShippingAddress }}</p>
+        <p><strong>discount:</strong> {{ product.discount }}</p>
         <p><strong>phoneNumber:</strong> {{ product.phoneNumber }}</p>
   
         <div class="button-group">
           <button (click)="editProduct(product)" class="edit-button">Edit</button>
-          <button (click)="deleteUser(product.userId)" class="delete-button">Delete</button>
+          <button (click)="deleteUser(product.productId)" class="delete-button">Delete</button>
         </div>
       </div>
     </div>
